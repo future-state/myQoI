@@ -1,0 +1,522 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Test Result Schema",
+    "examples": [
+        {
+            "serverid": 10395,
+            "testmethod": "ws,xhr,xhr",
+            "source": "sdk",
+            "configs": {
+                "apiKey": "abcdefghijklmnopqrstuvwxyz0123456789",
+                "sdkBaseUrl": "https://www.example.com",
+                "automaticStageProgression": true,
+                "latencyProtocol": "ws",
+                "downloadProtocol": "xhr",
+                "uploadProtocol": "xhr",
+                "host": "sea.host.speedtest.net",
+                "port": 8080,
+                "serverVersion": "2.7.5",
+                "serverBuild": "2020-06-16.1905.a787316"
+            },
+            "ping": 48,
+            "jitter": 1.6666666666666667,
+            "guid": "3ef83af1-6501-41cd-98a8-3b0157a3e5bb",
+            "serverSelectionMethod": "manual",
+            "uploadMeasurementMethod": "remote",
+            "upload": 2006,
+            "download": 12944,
+            "servers": {
+                "download": [{
+                    "id": 10395,
+                    "hostname": "sea.host.speedtest.net:8080",
+                    "port": 8080,
+                    "serverVersion": "2.7.5",
+                    "serverBuild": "2020-06-16.1905.a787316",
+                    "bytes": 24261120
+                }],
+                "upload": [{
+                    "id": 10395,
+                    "hostname": "sea.host.speedtest.net:8080",
+                    "port": 8080,
+                    "serverVersion": "2.7.5",
+                    "serverBuild": "2020-06-16.1905.a787316",
+                    "bytes": 3731040
+                }]
+            },
+            "hash": "725280629d890cf8d4e508fdeb97f270",
+            "clientip": "71.223.244.3"
+        }
+    ],
+    "required": [
+        "serverid",
+        "testmethod",
+        "source",
+        "configs",
+        "ping",
+        "jitter",
+        "guid",
+        "closestPingDetails",
+        "uploadMeasurementMethod",
+        "upload",
+        "download",
+        "servers",
+        "hash",
+        "clientip"
+    ],
+    "properties": {
+        "serverid": {
+            "$id": "#/properties/serverid",
+            "type": "string",
+            "title": "Server Identifier",
+            "examples": [
+                "14232"
+            ]
+        },
+        "testmethod": {
+            "$id": "#/properties/testmethod",
+            "type": "string",
+            "title": "Test Method: comma separated list of connection protocols used during test",
+            "examples": [
+                "ws,xhr,xhr"
+            ]
+        },
+        "source": {
+            "$id": "#/properties/source",
+            "type": "string",
+            "title": "Application Source",
+            "examples": [
+                "sdk"
+            ]
+        },
+        "configs": {
+            "$id": "#/properties/configs",
+            "type": "object",
+            "title": "Configuration",
+            "examples": [
+                {
+                    "downloadProtocol": "xhr",
+                    "sdkBaseUrl": "http://www.example.com",
+                    "latencyProtocol": "ws",
+                    "automaticStageProgression": true,
+                    "saveResults": false,
+                    "engine": "js",
+                    "serverBuild": "2019-09-17.2311.4b191db",
+                    "apiKey": "abcdefghijklmnopqrstuvwxyz0123456789",
+                    "host": "seattle.wa.speedtest.frontier.com",
+                    "serverVersion": "2.7.4",
+                    "port": 8080.0,
+                    "uploadProtocol": "xhr",
+                    "jsEngine": {
+                        "savePath": "/report",
+                        "saveType": "sdk"
+                    }
+                }
+            ],
+            "required": [
+                "engine",
+                "automaticStageProgression",
+                "jsEngine",
+                "saveResults",
+                "apiKey",
+                "sdkBaseUrl",
+                "latencyProtocol",
+                "downloadProtocol",
+                "uploadProtocol",
+                "host",
+                "port",
+                "serverVersion",
+                "serverBuild"
+            ],
+            "properties": {
+                "engine": {
+                    "$id": "#/properties/configs/properties/engine",
+                    "type": "string",
+                    "title": "Engine Configuration",
+                    "examples": [
+                        "js"
+                    ]
+                },
+                "automaticStageProgression": {
+                    "$id": "#/properties/configs/properties/automaticStageProgression",
+                    "type": "boolean",
+                    "title": "Automatic Test",
+                    "examples": [
+                        true
+                    ]
+                },
+                "jsEngine": {
+                    "$id": "#/properties/configs/properties/jsEngine",
+                    "type": "object",
+                    "title": "Javascript Engine Configuration",
+                    "examples": [
+                        {
+                            "savePath": "/report",
+                            "saveType": "sdk"
+                        }
+                    ],
+                    "required": [
+                        "savePath",
+                        "saveType"
+                    ],
+                    "properties": {
+                        "savePath": {
+                            "$id": "#/properties/configs/properties/jsEngine/properties/savePath",
+                            "type": "string",
+                            "title": "Save Path",
+                            "examples": [
+                                "/report"
+                            ]
+                        },
+                        "saveType": {
+                            "$id": "#/properties/configs/properties/jsEngine/properties/saveType",
+                            "type": "string",
+                            "title": "Save Type",
+                            "examples": [
+                                "sdk"
+                            ]
+                        }
+                    }
+                },
+                "saveResults": {
+                    "$id": "#/properties/configs/properties/saveResults",
+                    "type": "boolean",
+                    "title": "Save Results",
+                    "examples": [
+                        false
+                    ]
+                },
+                "apiKey": {
+                    "$id": "#/properties/configs/properties/apiKey",
+                    "type": "string",
+                    "title": "API Key",
+                    "examples": [
+                        "abcdefghijklmnopqrstuvwxyz0123456789"
+                    ]
+                },
+                "sdkBaseUrl": {
+                    "$id": "#/properties/configs/properties/sdkBaseUrl",
+                    "type": "string",
+                    "title": "SDK Base URL",
+                    "examples": [
+                        "http://www.example.com"
+                    ]
+                },
+                "latencyProtocol": {
+                    "$id": "#/properties/configs/properties/latencyProtocol",
+                    "type": "string",
+                    "title": "Latency Protocol",
+                    "examples": [
+                        "ws"
+                    ]
+                },
+                "downloadProtocol": {
+                    "$id": "#/properties/configs/properties/downloadProtocol",
+                    "type": "string",
+                    "title": "Download Protocol",
+                    "examples": [
+                        "xhr"
+                    ]
+                },
+                "uploadProtocol": {
+                    "$id": "#/properties/configs/properties/uploadProtocol",
+                    "type": "string",
+                    "title": "Upload Protocol",
+                    "examples": [
+                        "xhr"
+                    ]
+                },
+                "host": {
+                    "$id": "#/properties/configs/properties/host",
+                    "type": "string",
+                    "title": "Host",
+                    "examples": [
+                        "seattle.wa.speedtest.frontier.com"
+                    ]
+                },
+                "port": {
+                    "$id": "#/properties/configs/properties/port",
+                    "type": "integer",
+                    "title": "Port",
+                    "examples": [
+                        8080
+                    ]
+                },
+                "serverVersion": {
+                    "$id": "#/properties/configs/properties/serverVersion",
+                    "type": "string",
+                    "title": "Server Version",
+                    "examples": [
+                        "2.7.4"
+                    ]
+                },
+                "serverBuild": {
+                    "$id": "#/properties/configs/properties/serverBuild",
+                    "type": "string",
+                    "title": "Server Build",
+                    "examples": [
+                        "2019-09-17.2311.4b191db"
+                    ]
+                }
+            }
+        },
+        "ping": {
+            "$id": "#/properties/ping",
+            "type": "integer",
+            "title": "Ping",
+            "examples": [
+                46
+            ]
+        },
+        "jitter": {
+            "$id": "#/properties/jitter",
+            "type": "number",
+            "title": "Jitter",
+            "examples": [
+                0.3333333333333333
+            ]
+        },
+        "guid": {
+            "$id": "#/properties/guid",
+            "type": "string",
+            "title": "Guid",
+            "examples": [
+                "ff87af4a-eaed-4b5b-9433-6100b3bd7382"
+            ]
+        },
+        "closestPingDetails": {
+            "$id": "#/properties/closestPingDetails",
+            "type": "string",
+            "title": "Closest Ping Details",
+            "examples": [
+                "[{\"server\":14232,\"jitter\":3,\"latency\":44},{\"server\":5904,\"jitter\":1,\"latency\":45},{\"server\":8864,\"jitter\":3,\"latency\":46},{\"server\":1782,\"jitter\":0.5,\"latency\":46},{\"server\":11329,\"jitter\":1,\"latency\":46},{\"server\":10395,\"jitter\":3,\"latency\":47},{\"server\":6199,\"jitter\":3.5,\"latency\":48},{\"server\":5033,\"jitter\":0.5,\"latency\":48},{\"server\":22168,\"jitter\":0.5,\"latency\":48},{\"server\":6057,\"jitter\":1,\"latency\":86}]"
+            ]
+        },
+        "uploadMeasurementMethod": {
+            "$id": "#/properties/uploadMeasurementMethod",
+            "type": "string",
+            "title": "Upload Measurement Method",
+            "examples": [
+                "remote"
+            ]
+        },
+        "upload": {
+            "$id": "#/properties/upload",
+            "type": "integer",
+            "title": "Upload speed in kilobits per second",
+            "examples": [
+                2113
+            ]
+        },
+        "download": {
+            "$id": "#/properties/download",
+            "type": "integer",
+            "title": "Download speed in kilobits per second",
+            "examples": [
+                36961
+            ]
+        },
+        "servers": {
+            "$id": "#/properties/servers",
+            "type": "object",
+            "title": "Servers Schema",
+            "examples": [
+                {
+                    "download": [
+                        {
+                            "id": 10395,
+                            "hostname": "sea.host.speedtest.net:8080",
+                            "port": 8080,
+                            "serverVersion": "2.7.5",
+                            "serverBuild": "2020-06-16.1905.a787316",
+                            "bytes": 24261120
+                        }
+                    ],
+                    "upload": [
+                        {
+                            "id": 10395,
+                            "hostname": "sea.host.speedtest.net:8080",
+                            "port": 8080,
+                            "serverVersion": "2.7.5",
+                            "serverBuild": "2020-06-16.1905.a787316",
+                            "bytes": 3731040
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "download",
+                "upload"
+            ],
+            "properties": {
+                "download": {
+                    "$id": "#/properties/servers/properties/download",
+                    "type": "array",
+                    "title": "Download Servers",
+                    "examples": [
+                        [
+                            {
+                                "id": 10395,
+                                "hostname": "sea.host.speedtest.net:8080",
+                                "port": 8080,
+                                "serverVersion": "2.7.5",
+                                "serverBuild": "2020-06-16.1905.a787316",
+                                "bytes": 24261120
+                            }
+                        ]
+                    ],
+                },
+                "required": [
+                    "id",
+                    "hostname",
+                    "port",
+                    "serverVersion",
+                    "serverBuild",
+                    "bytes"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/properties/servers/properties/download/items/anyOf/0/properties/id",
+                        "type": "integer",
+                        "title": "Identifier",
+                        "examples": [
+                            10395
+                        ]
+                    },
+                    "hostname": {
+                        "$id": "#/properties/servers/properties/download/items/anyOf/0/properties/hostname",
+                        "type": "string",
+                        "title": "Hostname",
+                        "examples": [
+                            "sea.host.speedtest.net:8080"
+                        ]
+                    },
+                    "port": {
+                        "$id": "#/properties/servers/properties/download/items/anyOf/0/properties/port",
+                        "type": "integer",
+                        "title": "Port",
+                        "examples": [
+                            8080
+                        ]
+                    },
+                    "serverVersion": {
+                        "$id": "#/properties/servers/properties/download/items/anyOf/0/properties/serverVersion",
+                        "type": "string",
+                        "title": "Server Version",
+                        "examples": [
+                            "2.7.5"
+                        ]
+                    },
+                    "serverBuild": {
+                        "$id": "#/properties/servers/properties/download/items/anyOf/0/properties/serverBuild",
+                        "type": "string",
+                        "title": "Server Build",
+                        "examples": [
+                            "2020-06-16.1905.a787316"
+                        ]
+                    },
+                    "bytes": {
+                        "$id": "#/properties/servers/properties/download/items/anyOf/0/properties/bytes",
+                        "type": "integer",
+                        "title": "Bytes",
+                        "examples": [
+                            24261120
+                        ]
+                    }
+                },
+                "upload": {
+                    "$id": "#/properties/servers/properties/upload",
+                    "type": "array",
+                    "title": "Upload Schema",
+                    "examples": [
+                        [
+                            {
+                                "id": 10395,
+                                "hostname": "sea.host.speedtest.net:8080",
+                                "port": 8080,
+                                "serverVersion": "2.7.5",
+                                "serverBuild": "2020-06-16.1905.a787316",
+                                "bytes": 3731040
+                            }
+                        ]
+                    ],
+                },
+                "required": [
+                    "id",
+                    "hostname",
+                    "port",
+                    "serverVersion",
+                    "serverBuild",
+                    "bytes"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/properties/servers/properties/upload/items/anyOf/0/properties/id",
+                        "type": "integer",
+                        "title": "Identifier",
+                        "examples": [
+                            10395
+                        ]
+                    },
+                    "hostname": {
+                        "$id": "#/properties/servers/properties/upload/items/anyOf/0/properties/hostname",
+                        "type": "string",
+                        "title": "Hostname",
+                        "examples": [
+                            "sea.host.speedtest.net:8080"
+                        ]
+                    },
+                    "port": {
+                        "$id": "#/properties/servers/properties/upload/items/anyOf/0/properties/port",
+                        "type": "integer",
+                        "title": "Port",
+                        "examples": [
+                            8080
+                        ]
+                    },
+                    "serverVersion": {
+                        "$id": "#/properties/servers/properties/upload/items/anyOf/0/properties/serverVersion",
+                        "type": "string",
+                        "title": "Server Version",
+                        "examples": [
+                            "2.7.5"
+                        ]
+                    },
+                    "serverBuild": {
+                        "$id": "#/properties/servers/properties/upload/items/anyOf/0/properties/serverBuild",
+                        "type": "string",
+                        "title": "Server Build",
+                        "examples": [
+                            "2020-06-16.1905.a787316"
+                        ]
+                    },
+                    "bytes": {
+                        "$id": "#/properties/servers/properties/upload/items/anyOf/0/properties/bytes",
+                        "type": "integer",
+                        "title": "Bytes",
+                        "examples": [
+                            3731040
+                        ]
+                    }
+                }
+            }
+        },
+        "hash": {
+            "$id": "#/properties/hash",
+            "type": "string",
+            "title": "Hash",
+            "examples": [
+                "cffde8a0812351424db9c30ebcd978e1"
+            ]
+        },
+        "clientip": {
+            "$id": "#/properties/clientip",
+            "type": "string",
+            "title": "Client IP",
+            "examples": [
+                "71.223.231.180"
+            ]
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Save Result Schema",
+    "examples": [
+        {
+            "resultId": "3ef83af1-6501-41cd-98a8-3b0157a3e5bb",
+            "save": {
+                "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+                "browser": "Chrome",
+                "ip_address": "172.16.7.142"
+            }
+        }
+    ],
+    "required": [
+        "resultid",
+        "save"
+    ],
+    "properties": {
+        "resultid": {
+            "$id": "#/properties/resultid",
+            "type": "string",
+            "title": "Result Id: GUID used for persisted test result lookup",
+            "examples": [
+                "ff87af4a-eaed-4b5b-9433-6100b3bd7382"
+            ]
+        },
+        "save": {
+            "$id": "#/properties/save",
+            "type": "object",
+            "title": "Save",
+            "examples": [
+                {
+                    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+                    "browser": "Chrome",
+                    "ip_address": "172.16.7.142"
+                }
+            ]
+        }
+    }
+}

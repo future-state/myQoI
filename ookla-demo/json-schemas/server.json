@@ -1,0 +1,134 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Server Schema",
+    "examples": [
+        {
+            "url": "http://201.171.245.5:8080/speedtest/upload.php",
+            "lat": "32.6517",
+            "lon": "-115.4789",
+            "distance": 209,
+            "name": "Mexicali",
+            "country": "Mexico",
+            "cc": "MX",
+            "sponsor": "INFINITUM",
+            "id": "3419",
+            "preferred": 1,
+            "https_functional": 1,
+            "host": "201.171.245.5.prod.hosts.ooklaserver.net:8080"
+        }
+    ],
+    "required": [
+        "url",
+        "lat",
+        "lon",
+        "distance",
+        "name",
+        "country",
+        "cc",
+        "sponsor",
+        "id",
+        "preferred",
+        "https_functional",
+        "host"
+    ],
+    "properties": {
+        "url": {
+            "$id": "#/properties/url",
+            "type": "string",
+            "title": "URL used for legacy speedtests",
+            "examples": [
+                "http://201.171.245.5:8080/speedtest/upload.php"
+            ]
+        },
+        "lat": {
+            "$id": "#/properties/lat",
+            "type": "string",
+            "title": "Latitude",
+            "examples": [
+                "32.6517"
+            ]
+        },
+        "lon": {
+            "$id": "#/properties/lon",
+            "type": "string",
+            "title": "Longitude",
+            "examples": [
+                "-115.4789"
+            ]
+        },
+        "distance": {
+            "$id": "#/properties/distance",
+            "type": "integer",
+            "title": "Distance",
+            "examples": [
+                209
+            ]
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "Name",
+            "examples": [
+                "Mexicali"
+            ]
+        },
+        "country": {
+            "$id": "#/properties/country",
+            "type": "string",
+            "title": "Country",
+            "examples": [
+                "Mexico"
+            ]
+        },
+        "cc": {
+            "$id": "#/properties/cc",
+            "type": "string",
+            "title": "Country Code",
+            "examples": [
+                "MX"
+            ]
+        },
+        "sponsor": {
+            "$id": "#/properties/sponsor",
+            "type": "string",
+            "title": "Sponsor",
+            "examples": [
+                "INFINITUM"
+            ]
+        },
+        "id": {
+            "$id": "#/properties/id",
+            "type": "string",
+            "title": "Identifier",
+            "examples": [
+                "3419"
+            ]
+        },
+        "preferred": {
+            "$id": "#/properties/preferred",
+            "type": "integer",
+            "title": "preferred",
+            "examples": [
+                1
+            ]
+        },
+        "https_functional": {
+            "$id": "#/properties/https_functional",
+            "type": "integer",
+            "title": "HTTPS Functional",
+            "examples": [
+                1
+            ]
+        },
+        "host": {
+            "$id": "#/properties/host",
+            "type": "string",
+            "title": "Host",
+            "examples": [
+                "201.171.245.5.prod.hosts.ooklaserver.net:8080"
+            ]
+        }
+    }
+}

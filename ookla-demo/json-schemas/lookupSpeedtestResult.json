@@ -1,0 +1,344 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Lookup Speedtest Result Schema",
+    "examples": [
+        {
+            "resultId": 9692829234,
+            "serverId": 10395,
+            "resultDate": "2020-07-01T18:58:50.000Z",
+            "ipAddress": "172.16.7.0",
+            "latency": 48,
+            "serverOwnerId": 7963,
+            "isSpoofed": false,
+            "jitter": 2,
+            "testConfigurationId": 27538,
+            "guid": "3ef83af1-6501-41cd-98a8-3b0157a3e5bb",
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+            "browserName": "Chrome",
+            "browserVersion": "83.0.4103.116",
+            "osName": "OS X",
+            "osVersion": "10.14.6",
+            "serverName": "Seattle, WA",
+            "serverSponsor": "Speedtest.net",
+            "ispId": null,
+            "ispName": null,
+            "ispNameRaw": null,
+            "latitude": 0,
+            "longitude": 0,
+            "country": null,
+            "city": null,
+            "region": null,
+            "countryId": null,
+            "regionId": null,
+            "cityId": null,
+            "upload": 250750,
+            "download": 1618000,
+            "paidTest": false,
+            "sessionId": 3231018534,
+            "testId": "3ef83af1-6501-41cd-98a8-3b0157a3e5bb"
+        }
+    ],
+    "required": [
+        "resultId",
+        "serverId",
+        "resultDate",
+        "ipAddress",
+        "latency",
+        "serverOwnerId",
+        "isSpoofed",
+        "jitter",
+        "testConfigurationId",
+        "guid",
+        "userAgent",
+        "browserName",
+        "browserVersion",
+        "osName",
+        "osVersion",
+        "serverName",
+        "serverSponsor",
+        "ispId",
+        "ispName",
+        "ispNameRaw",
+        "latitude",
+        "longitude",
+        "country",
+        "city",
+        "region",
+        "countryId",
+        "regionId",
+        "cityId",
+        "upload",
+        "download",
+        "paidTest",
+        "sessionId",
+        "testId"
+    ],
+    "properties": {
+        "resultId": {
+            "$id": "#/properties/resultId",
+            "type": "integer",
+            "title": "Result Identifier",
+            "examples": [
+                9692829234
+            ]
+        },
+        "serverId": {
+            "$id": "#/properties/serverId",
+            "type": "integer",
+            "title": "Server Identifier",
+            "examples": [
+                10395
+            ]
+        },
+        "resultDate": {
+            "$id": "#/properties/resultDate",
+            "type": "string",
+            "title": "Result Date/Timestamp",
+            "examples": [
+                "2020-07-01T18:58:50.000Z"
+            ]
+        },
+        "ipAddress": {
+            "$id": "#/properties/ipAddress",
+            "type": "string",
+            "title": "IP Address",
+            "examples": [
+                "172.16.7.0"
+            ]
+        },
+        "latency": {
+            "$id": "#/properties/latency",
+            "type": "integer",
+            "title": "Latency",
+            "examples": [
+                48
+            ]
+        },
+        "serverOwnerId": {
+            "$id": "#/properties/serverOwnerId",
+            "type": "integer",
+            "title": "Server Owner Identifier",
+            "examples": [
+                7963
+            ]
+        },
+        "isSpoofed": {
+            "$id": "#/properties/isSpoofed",
+            "type": "boolean",
+            "title": "Is Spoofed",
+            "examples": [
+                false
+            ]
+        },
+        "jitter": {
+            "$id": "#/properties/jitter",
+            "type": "integer",
+            "title": "Jitter",
+            "examples": [
+                2
+            ]
+        },
+        "testConfigurationId": {
+            "$id": "#/properties/testConfigurationId",
+            "type": "integer",
+            "title": "Test Configuration Identifier",
+            "examples": [
+                27538
+            ]
+        },
+        "guid": {
+            "$id": "#/properties/guid",
+            "type": "string",
+            "title": "GUID",
+            "examples": [
+                "3ef83af1-6501-41cd-98a8-3b0157a3e5bb"
+            ]
+        },
+        "userAgent": {
+            "$id": "#/properties/userAgent",
+            "type": "string",
+            "title": "User Agent",
+            "examples": [
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+            ]
+        },
+        "browserName": {
+            "$id": "#/properties/browserName",
+            "type": "string",
+            "title": "Browser Name",
+            "examples": [
+                "Chrome"
+            ]
+        },
+        "browserVersion": {
+            "$id": "#/properties/browserVersion",
+            "type": "string",
+            "title": "Browser Version",
+            "examples": [
+                "83.0.4103.116"
+            ]
+        },
+        "osName": {
+            "$id": "#/properties/osName",
+            "type": "string",
+            "title": "Operating System Name",
+            "examples": [
+                "OS X"
+            ]
+        },
+        "osVersion": {
+            "$id": "#/properties/osVersion",
+            "type": "string",
+            "title": "Operating System Version",
+            "examples": [
+                "10.14.6"
+            ]
+        },
+        "serverName": {
+            "$id": "#/properties/serverName",
+            "type": "string",
+            "title": "Server Name",
+            "examples": [
+                "Seattle, WA"
+            ]
+        },
+        "serverSponsor": {
+            "$id": "#/properties/serverSponsor",
+            "type": "string",
+            "title": "Server Sponsor",
+            "examples": [
+                "Speedtest.net"
+            ]
+        },
+        "ispId": {
+            "$id": "#/properties/ispId",
+            "type": "null",
+            "title": "Internet Service Provider Identifier",
+            "examples": [
+                null
+            ]
+        },
+        "ispName": {
+            "$id": "#/properties/ispName",
+            "type": "null",
+            "title": "Internet Service Provider Name",
+            "examples": [
+                null
+            ]
+        },
+        "ispNameRaw": {
+            "$id": "#/properties/ispNameRaw",
+            "type": "null",
+            "title": "Internet Service Provider Name (Raw)",
+            "examples": [
+                null
+            ]
+        },
+        "latitude": {
+            "$id": "#/properties/latitude",
+            "type": "integer",
+            "title": "Latitude",
+            "examples": [
+                0
+            ]
+        },
+        "longitude": {
+            "$id": "#/properties/longitude",
+            "type": "integer",
+            "title": "Longitude",
+            "examples": [
+                0
+            ]
+        },
+        "country": {
+            "$id": "#/properties/country",
+            "type": "null",
+            "title": "Country",
+            "examples": [
+                null
+            ]
+        },
+        "city": {
+            "$id": "#/properties/city",
+            "type": "null",
+            "title": "City",
+            "examples": [
+                null
+            ]
+        },
+        "region": {
+            "$id": "#/properties/region",
+            "type": "null",
+            "title": "Region",
+            "examples": [
+                null
+            ]
+        },
+        "countryId": {
+            "$id": "#/properties/countryId",
+            "type": "null",
+            "title": "Country Identifier",
+            "examples": [
+                null
+            ]
+        },
+        "regionId": {
+            "$id": "#/properties/regionId",
+            "type": "null",
+            "title": "Region Identifier",
+            "examples": [
+                null
+            ]
+        },
+        "cityId": {
+            "$id": "#/properties/cityId",
+            "type": "null",
+            "title": "City Identifier",
+            "examples": [
+                null
+            ]
+        },
+        "upload": {
+            "$id": "#/properties/upload",
+            "type": "integer",
+            "title": "Upload Speed (in bytes per second)",
+            "examples": [
+                250750
+            ]
+        },
+        "download": {
+            "$id": "#/properties/download",
+            "type": "integer",
+            "title": "Download Speed (in bytes per second)",
+            "examples": [
+                1618000
+            ]
+        },
+        "paidTest": {
+            "$id": "#/properties/paidTest",
+            "type": "boolean",
+            "title": "Is Paid Test",
+            "examples": [
+                false
+            ]
+        },
+        "sessionId": {
+            "$id": "#/properties/sessionId",
+            "type": "integer",
+            "title": "Session Identifier",
+            "examples": [
+                3231018534
+            ]
+        },
+        "testId": {
+            "$id": "#/properties/testId",
+            "type": "string",
+            "title": "Test Identifier",
+            "examples": [
+                "3ef83af1-6501-41cd-98a8-3b0157a3e5bb"
+            ]
+        }
+    }
+}

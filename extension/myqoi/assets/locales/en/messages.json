@@ -1,0 +1,11 @@
+{
+    "appName": {
+        "message": "myqoi"
+    },
+    "appShortName": {
+        "message": "myqoi"
+    },
+    "appDescription": {
+        "message": "Collects data points about a user's internet conection and sends it to a database in the background."
+    }
+}

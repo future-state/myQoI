@@ -1,0 +1,141 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Latency Schema",
+    "examples": [
+        {
+            "latency": 48,
+            "jitter": 1.6666666666666667,
+            "serverVersion": {
+                "version": "2.7.5",
+                "build": "2020-06-16.1905.a787316"
+            },
+            "serverCapabilities": {
+                "SERVER_HOST_AUTH": "SERVER_HOST_AUTH",
+                "UPLOAD_STATS": "UPLOAD_STATS"
+            },
+            "clientAddress": "71.223.244.3",
+            "connectionProtocol": "ws",
+            "useSecureConnections": false
+        }
+    ],
+    "required": [
+        "latency",
+        "jitter",
+        "serverVersion",
+        "serverCapabilities",
+        "clientAddress",
+        "connectionProtocol",
+        "useSecureConnections"
+    ],
+    "properties": {
+        "latency": {
+            "$id": "#/properties/latency",
+            "type": "integer",
+            "title": "Latency (in milliseconds)",
+            "examples": [
+                48
+            ]
+        },
+        "jitter": {
+            "$id": "#/properties/jitter",
+            "type": "number",
+            "title": "Jitter (in milliseconds)",
+            "examples": [
+                1.6666666666666667
+            ]
+        },
+        "serverVersion": {
+            "$id": "#/properties/serverVersion",
+            "type": "object",
+            "title": "Server Version",
+            "examples": [
+                {
+                    "version": "2.7.5",
+                    "build": "2020-06-16.1905.a787316"
+                }
+            ],
+            "required": [
+                "version",
+                "build"
+            ],
+            "properties": {
+                "version": {
+                    "$id": "#/properties/serverVersion/properties/version",
+                    "type": "string",
+                    "title": "Version",
+                    "examples": [
+                        "2.7.5"
+                    ]
+                },
+                "build": {
+                    "$id": "#/properties/serverVersion/properties/build",
+                    "type": "string",
+                    "title": "Build Identifier",
+                    "examples": [
+                        "2020-06-16.1905.a787316"
+                    ]
+                }
+            }
+        },
+        "serverCapabilities": {
+            "$id": "#/properties/serverCapabilities",
+            "type": "object",
+            "title": "Server Capabilities",
+            "examples": [
+                {
+                    "SERVER_HOST_AUTH": "SERVER_HOST_AUTH",
+                    "UPLOAD_STATS": "UPLOAD_STATS"
+                }
+            ],
+            "optional": [
+                "SERVER_HOST_AUTH",
+                "UPLOAD_STATS"
+            ],
+            "properties": {
+                "SERVER_HOST_AUTH": {
+                    "$id": "#/properties/serverCapabilities/properties/SERVER_HOST_AUTH",
+                    "type": "string",
+                    "title": "SERVER_HOST_AUTH",
+                    "examples": [
+                        "SERVER_HOST_AUTH"
+                    ]
+                },
+                "UPLOAD_STATS": {
+                    "$id": "#/properties/serverCapabilities/properties/UPLOAD_STATS",
+                    "type": "string",
+                    "title": "UPLOAD_STATS",
+                    "default": "",
+                    "examples": [
+                        "UPLOAD_STATS"
+                    ]
+                }
+            }
+        },
+        "clientAddress": {
+            "$id": "#/properties/clientAddress",
+            "type": "string",
+            "title": "Client IP Address",
+            "examples": [
+                "71.223.244.3"
+            ]
+        },
+        "connectionProtocol": {
+            "$id": "#/properties/connectionProtocol",
+            "type": "string",
+            "title": "Connection Protocol",
+            "examples": [
+                "ws"
+            ]
+        },
+        "useSecureConnections": {
+            "$id": "#/properties/useSecureConnections",
+            "type": "boolean",
+            "title": "Use Secure Connections: TLS is Enabled (true) or Disabled (false)",
+            "examples": [
+                false
+            ]
+        }
+    }
+}

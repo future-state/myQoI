@@ -1,0 +1,404 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Fetch Test Result Schema",
+    "examples": [
+        {
+            "resultId": 123456789,
+            "testConfigurationId": 12345,
+            "guid": "12345678-1234-1234-1234-12345678abcd",
+            "customerId": 12345,
+            "serverId": 10000,
+            "resultDate": "2020-08-25T23:38:15.000Z",
+            "latency": 18,
+            "jitter": 8,
+            "locationId": 194,
+            "place": 3578,
+            "ispId": 86113,
+            "postalCode": 4475,
+            "geoipSourceId": 2,
+            "isSpoofed": false,
+            "serverSelection": 1,
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36",
+            "browserName": "Chrome",
+            "browserVersion": "84.0.4147.135",
+            "osName": "OS X",
+            "osVersion": "10.15.5",
+            "serverName": "Tucson, AZ",
+            "serverSponsor": "CenturyLink",
+            "ispName": "CenturyLink",
+            "ispNameRaw": "CenturyLink",
+            "latitude": 33.384,
+            "longitude": -111.929,
+            "country": "United States",
+            "city": "Tempe",
+            "region": "Arizona",
+            "countryId": 1,
+            "regionId": 36,
+            "cityId": 741,
+            "supplementalData": "{\"name\":\"Test Name\",\"testField\":\"foobar\"}",
+            "ipAddress": "97.124.235.0",
+            "upload": 233500,
+            "download": 2861750,
+            "paidTest": true,
+            "sessionId": 3348337459,
+            "testId": "12345678-1234-1234-1234-12345678abcd"
+        }
+    ],
+    "required": [
+        "resultId",
+        "testConfigurationId",
+        "guid",
+        "customerId",
+        "serverId",
+        "resultDate",
+        "latency",
+        "jitter",
+        "locationId",
+        "place",
+        "ispId",
+        "postalCode",
+        "geoipSourceId",
+        "isSpoofed",
+        "serverSelection",
+        "userAgent",
+        "browserName",
+        "browserVersion",
+        "osName",
+        "osVersion",
+        "serverName",
+        "serverSponsor",
+        "ispName",
+        "ispNameRaw",
+        "latitude",
+        "longitude",
+        "country",
+        "city",
+        "region",
+        "countryId",
+        "regionId",
+        "cityId",
+        "supplementalData",
+        "ipAddress",
+        "upload",
+        "download",
+        "paidTest",
+        "sessionId",
+        "testId"
+    ],
+    "properties": {
+        "resultId": {
+            "$id": "#/properties/resultId",
+            "type": "integer",
+            "title": "Result Identifier",
+            "examples": [
+                123456789
+            ]
+        },
+        "testConfigurationId": {
+            "$id": "#/properties/testConfigurationId",
+            "type": "integer",
+            "title": "T Configuration Identifier",
+            "examples": [
+                12345
+            ]
+        },
+        "guid": {
+            "$id": "#/properties/guid",
+            "type": "string",
+            "title": "Global Unique Identifier",
+            "examples": [
+                "12345678-1234-1234-1234-12345678abcd"
+            ]
+        },
+        "customerId": {
+            "$id": "#/properties/customerId",
+            "type": "integer",
+            "title": "Customer Identifier",
+            "examples": [
+                12345
+            ]
+        },
+        "serverId": {
+            "$id": "#/properties/serverId",
+            "type": "integer",
+            "title": "Server Identifier",
+            "examples": [
+                10170
+            ]
+        },
+        "resultDate": {
+            "$id": "#/properties/resultDate",
+            "type": "string",
+            "title": "Result Date",
+            "examples": [
+                "2020-08-25T23:38:15.000Z"
+            ]
+        },
+        "latency": {
+            "$id": "#/properties/latency",
+            "type": "integer",
+            "title": "Latency (in milliseconds)",
+            "examples": [
+                18
+            ]
+        },
+        "jitter": {
+            "$id": "#/properties/jitter",
+            "type": "integer",
+            "title": "Jitter (in milliseconds)",
+            "examples": [
+                8
+            ]
+        },
+        "locationId": {
+            "$id": "#/properties/locationId",
+            "type": "integer",
+            "title": "Location Identifier",
+            "examples": [
+                194
+            ]
+        },
+        "place": {
+            "$id": "#/properties/place",
+            "type": "integer",
+            "title": "Place Identifier",
+            "examples": [
+                3578
+            ]
+        },
+        "ispId": {
+            "$id": "#/properties/ispId",
+            "type": "integer",
+            "title": "ISP Identifier",
+            "examples": [
+                86113
+            ]
+        },
+        "postalCode": {
+            "$id": "#/properties/postalCode",
+            "type": "integer",
+            "title": "Postal Code",
+            "examples": [
+                4475
+            ]
+        },
+        "geoipSourceId": {
+            "$id": "#/properties/geoipSourceId",
+            "type": "integer",
+            "title": "GeoIP Source Identifier",
+            "examples": [
+                2
+            ]
+        },
+        "isSpoofed": {
+            "$id": "#/properties/isSpoofed",
+            "type": "boolean",
+            "title": "isSpoofed",
+            "examples": [
+                false
+            ]
+        },
+        "serverSelection": {
+            "$id": "#/properties/serverSelection",
+            "type": "integer",
+            "title": "Server Selection",
+            "examples": [
+                1
+            ]
+        },
+        "userAgent": {
+            "$id": "#/properties/userAgent",
+            "type": "string",
+            "title": "User Agent",
+            "examples": [
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+            ]
+        },
+        "browserName": {
+            "$id": "#/properties/browserName",
+            "type": "string",
+            "title": "Browser Name",
+            "examples": [
+                "Chrome"
+            ]
+        },
+        "browserVersion": {
+            "$id": "#/properties/browserVersion",
+            "type": "string",
+            "title": "Browser Version",
+            "examples": [
+                "84.0.4147.135"
+            ]
+        },
+        "osName": {
+            "$id": "#/properties/osName",
+            "type": "string",
+            "title": "OS Name",
+            "examples": [
+                "OS X"
+            ]
+        },
+        "osVersion": {
+            "$id": "#/properties/osVersion",
+            "type": "string",
+            "title": "OS Version",
+            "examples": [
+                "10.15.5"
+            ]
+        },
+        "serverName": {
+            "$id": "#/properties/serverName",
+            "type": "string",
+            "title": "Server Name",
+            "examples": [
+                "Tucson, AZ"
+            ]
+        },
+        "serverSponsor": {
+            "$id": "#/properties/serverSponsor",
+            "type": "string",
+            "title": "Server Sponsor",
+            "examples": [
+                "CenturyLink"
+            ]
+        },
+        "ispName": {
+            "$id": "#/properties/ispName",
+            "type": "string",
+            "title": "ISP Name",
+            "examples": [
+                "CenturyLink"
+            ]
+        },
+        "ispNameRaw": {
+            "$id": "#/properties/ispNameRaw",
+            "type": "string",
+            "title": "ISP Name Raw",
+            "examples": [
+                "CenturyLink"
+            ]
+        },
+        "latitude": {
+            "$id": "#/properties/latitude",
+            "type": "number",
+            "title": "Latitude",
+            "examples": [
+                33.384
+            ]
+        },
+        "longitude": {
+            "$id": "#/properties/longitude",
+            "type": "number",
+            "title": "Longitude",
+            "examples": [
+                -111.929
+            ]
+        },
+        "country": {
+            "$id": "#/properties/country",
+            "type": "string",
+            "title": "Country",
+            "examples": [
+                "United States"
+            ]
+        },
+        "city": {
+            "$id": "#/properties/city",
+            "type": "string",
+            "title": "City",
+            "examples": [
+                "Tempe"
+            ]
+        },
+        "region": {
+            "$id": "#/properties/region",
+            "type": "string",
+            "title": "Region",
+            "examples": [
+                "Arizona"
+            ]
+        },
+        "countryId": {
+            "$id": "#/properties/countryId",
+            "type": "integer",
+            "title": "Country Identifier",
+            "examples": [
+                1
+            ]
+        },
+        "regionId": {
+            "$id": "#/properties/regionId",
+            "type": "integer",
+            "title": "Region Identifier",
+            "examples": [
+                36
+            ]
+        },
+        "cityId": {
+            "$id": "#/properties/cityId",
+            "type": "integer",
+            "title": "City Identifier",
+            "examples": [
+                741
+            ]
+        },
+        "supplementalData": {
+            "$id": "#/properties/supplementalData",
+            "type": "string",
+            "title": "Supplemental Data",
+            "examples": [
+                "{\"name\":\"Test Name\",\"testField\":\"foobar\"}"
+            ]
+        },
+        "ipAddress": {
+            "$id": "#/properties/ipAddress",
+            "type": "string",
+            "title": "IP Address",
+            "examples": [
+                "97.124.235.0"
+            ]
+        },
+        "upload": {
+            "$id": "#/properties/upload",
+            "type": "integer",
+            "title": "Upload (bytes per second)",
+            "examples": [
+                233500
+            ]
+        },
+        "download": {
+            "$id": "#/properties/download",
+            "type": "integer",
+            "title": "Download (bytes per second)",
+            "examples": [
+                2861750
+            ]
+        },
+        "paidTest": {
+            "$id": "#/properties/paidTest",
+            "type": "boolean",
+            "title": "Paid Test",
+            "examples": [
+                true
+            ]
+        },
+        "sessionId": {
+            "$id": "#/properties/sessionId",
+            "type": "integer",
+            "title": "Session Identifier",
+            "examples": [
+                3348337459
+            ]
+        },
+        "testId": {
+            "$id": "#/properties/testId",
+            "type": "string",
+            "title": "Test Identifier",
+            "examples": [
+                "12345678-1234-1234-1234-12345678abcd"
+            ]
+        }
+    },
+}

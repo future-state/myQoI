@@ -1,0 +1,162 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Upload Schema",
+    "examples": [
+        {
+            "speed": 250704,
+            "servers": [
+                {
+                    "id": 10395,
+                    "hostname": "sea.host.speedtest.net:8080",
+                    "port": 8080,
+                    "serverVersion": "2.7.5",
+                    "serverBuild": "2020-06-16.1905.a787316",
+                    "bytes": 3731040
+                }
+            ],
+            "connectionProtocol": "xhr",
+            "useSecureConnections": false,
+            "method": "remote"
+        }
+    ],
+    "required": [
+        "speed",
+        "servers",
+        "connectionProtocol",
+        "useSecureConnections",
+        "method"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "speed": {
+            "$id": "#/properties/speed",
+            "type": "integer",
+            "title": "Speed (in bytes per second)",
+            "examples": [
+                250704
+            ]
+        },
+        "servers": {
+            "$id": "#/properties/servers",
+            "type": "array",
+            "title": "Servers",
+            "examples": [
+                [
+                    {
+                        "id": 10395,
+                        "hostname": "sea.host.speedtest.net:8080",
+                        "port": 8080,
+                        "serverVersion": "2.7.5",
+                        "serverBuild": "2020-06-16.1905.a787316",
+                        "bytes": 3731040
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "$id": "#/properties/servers/items/anyOf/0",
+                        "type": "object",
+                        "examples": [
+                            {
+                                "id": 10395,
+                                "hostname": "sea.host.speedtest.net:8080",
+                                "port": 8080,
+                                "serverVersion": "2.7.5",
+                                "serverBuild": "2020-06-16.1905.a787316",
+                                "bytes": 3731040
+                            }
+                        ],
+                        "required": [
+                            "id",
+                            "hostname",
+                            "port",
+                            "serverVersion",
+                            "serverBuild",
+                            "bytes"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "$id": "#/properties/servers/items/anyOf/0/properties/id",
+                                "type": "integer",
+                                "title": "Identifier",
+                                "examples": [
+                                    10395
+                                ]
+                            },
+                            "hostname": {
+                                "$id": "#/properties/servers/items/anyOf/0/properties/hostname",
+                                "type": "string",
+                                "title": "Hostname",
+                                "examples": [
+                                    "sea.host.speedtest.net:8080"
+                                ]
+                            },
+                            "port": {
+                                "$id": "#/properties/servers/items/anyOf/0/properties/port",
+                                "type": "integer",
+                                "title": "Port",
+                                "examples": [
+                                    8080
+                                ]
+                            },
+                            "serverVersion": {
+                                "$id": "#/properties/servers/items/anyOf/0/properties/serverVersion",
+                                "type": "string",
+                                "title": "Server Version",
+                                "examples": [
+                                    "2.7.5"
+                                ]
+                            },
+                            "serverBuild": {
+                                "$id": "#/properties/servers/items/anyOf/0/properties/serverBuild",
+                                "type": "string",
+                                "title": "Server Build",
+                                "examples": [
+                                    "2020-06-16.1905.a787316"
+                                ]
+                            },
+                            "bytes": {
+                                "$id": "#/properties/servers/items/anyOf/0/properties/bytes",
+                                "type": "integer",
+                                "title": "Bytes",
+                                "examples": [
+                                    3731040
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "$id": "#/properties/servers/items"
+            }
+        },
+        "connectionProtocol": {
+            "$id": "#/properties/connectionProtocol",
+            "type": "string",
+            "title": "Connection Protocol",
+            "examples": [
+                "xhr"
+            ]
+        },
+        "useSecureConnections": {
+            "$id": "#/properties/useSecureConnections",
+            "type": "boolean",
+            "title": "Use Secure Connections: TLS is Enabled (true) or Disabled (false)",
+            "examples": [
+                false
+            ]
+        },
+        "method": {
+            "$id": "#/properties/method",
+            "type": "string",
+            "title": "Upload Measurement Method",
+            "examples": [
+                "remote"
+            ]
+        }
+    }
+}
